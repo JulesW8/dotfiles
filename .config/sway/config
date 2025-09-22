@@ -1,20 +1,15 @@
-# --- Define color values ---
-set $background #1a1a1a
-set $foreground #e0e0e0
-set $purple #7f1ea8
-set $green #1ab831
-set $red #ff2d2d
-set $yellow #c9b83f
-set $unfocused_background #555555
-set $unfocused_foreground #f5f5f5
-
 # --- Define Screens ---
 # DP-3		= 27"
 # HDMI-A-1 	= 25"
 
-output DP-3 resolution 1920x1080 position 1920,420 bg /home/jules/.joker.png center $background
-output HDMI-A-1 resolution 1080x1920 position 0,0 transform 270 bg /home/jules/.joker.png center $background
-# ----------------------
+output DP-3 resolution 1920x1080 position 1920,420
+output HDMI-A-1 resolution 1080x1920 position 0,0 transform 270
+
+output * bg /home/jules/.config/backgrounds/joker.png center $background
+
+# --- Includes ---
+include "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf"
+include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf")'
 
 # --- Define Keys / Standards ---
 set $mod Mod4

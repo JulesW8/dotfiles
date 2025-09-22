@@ -2,7 +2,7 @@
 # dotfiles -> ~/.config
 # Overwrites existing configs with repo versions
 
-CONFIGS = ("sway" "waybar" "wofi" "foot" "fastfetch")
+CONFIGS = ("backgrounds" "fastfetch" "sway" "waybar" "wofi")
 
 for c in "${CONFIGS[@]}"; do
     src="$HOME/dotfiles/.config/$c"
