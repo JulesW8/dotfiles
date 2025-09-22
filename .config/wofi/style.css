@@ -1,0 +1,64 @@
+@import "/home/jules/.config/wlr/colors.css";
+
+/* Main window */
+window {
+    margin: 0;
+    padding: 8px;
+    border: 2px solid @purple;
+    border-radius: 4px;
+    background-color: @background;
+}
+
+/* Scroll container */
+#scroll {
+    margin: 0;
+    padding: 0;
+    background-color: @background;
+}
+
+/* Input/search bar */
+#input {
+    margin: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 2px solid @purple;
+    background-color: @background;
+    color: @foreground;
+}
+
+/* Entries (list items) */
+#entry {
+    background-color: @background;
+    color: @foreground;
+    margin: 4px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 2px solid @background;x
+}
+
+/* Selected entry */
+#entry:selected {
+    background-color: @background;
+    color: @green;
+    border-radius: 4px;
+    border: 2px solid @green;
+}
+
+/* Text inside entry */
+#entry:selected #text {
+    color: @green;
+}
+
+/* Hover state */
+#entry:hover {
+    background-color: @background;
+    color: @foreground;
+}
+
+/* Inner/outer boxes (optional for nested elements) */
+#inner-box, #outer-box {
+    margin: 5px;
+    padding: 5px;
+    background-color: @background;
+    border: none;
+}

@@ -1,0 +1,12 @@
+show=drun
+width=800
+height=600
+alsways_parse_args=true
+show_all=false
+term=foot
+hide_scroll=true
+print_command=true
+insensitive=true
+prompt=
+columns=2
+style=/home/jules/.config/wofi/style.css

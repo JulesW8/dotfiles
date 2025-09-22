@@ -1,0 +1,78 @@
+@import "/home/jules/.config/global/joker_main.css";
+
+
+window#waybar {
+	background-color: @background;
+}
+
+#clock,
+#network,
+#custom-power,
+#custom-launcher {
+    min-width: 32px;
+    min-height: 32px;
+    padding: 0 4px;
+    margin: 4px;
+    border-radius: 4px;
+}
+
+#workspaces {
+    background-color: @background;
+}
+
+#workspaces button {
+	min-width: 24px;
+	min-height: 24px;
+	padding: 0 4px;
+	margin: 4px;
+	border-radius: 4px;
+	background-color: @purple;
+	color: @foreground;
+}
+
+#workspaces button:active {
+	background-color: @green;
+}
+
+#workspaces button:hover {
+	background-color: @background;
+	color: @purple;
+}
+
+#clock {
+    background-color: @purple;
+}
+
+#network {
+    background-color: @background;
+    color: @purple;
+    font-size: 24px;
+}
+
+#network:hover {
+    background-color: @purple;
+    color: @background;
+}
+
+
+#custom-launcher {
+    background-color: @background;
+    color: @yellow;
+    font-size: 24px;
+}
+
+#custom-launcher:hover {
+    background-color: @yellow;
+    color: @background;
+}
+
+#custom-power {
+    background-color: @background;
+    color: @red;
+    font-size: 24px;
+}
+
+#custom-power:hover {
+    background-color: @red;
+    color: @background;
+}

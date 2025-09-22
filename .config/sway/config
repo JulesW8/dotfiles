@@ -1,0 +1,68 @@
+# --- Define color values ---
+set $background #1a1a1a
+set $foreground #e0e0e0
+set $purple #7f1ea8
+set $green #1ab831
+set $red #ff2d2d
+set $yellow #c9b83f
+set $unfocused_background #555555
+set $unfocused_foreground #f5f5f5
+
+# --- Define Screens ---
+# DP-3		= 27"
+# HDMI-A-1 	= 25"
+
+output DP-3 resolution 1920x1080 position 1920,420 bg /home/jules/.joker.png center $background
+output HDMI-A-1 resolution 1080x1920 position 0,0 transform 270 bg /home/jules/.joker.png center $background
+# ----------------------
+
+# --- Define Keys / Standards ---
+set $mod Mod4
+set $term foot
+# -------------------------------
+
+# --- Keyboard Layout ---
+input * {
+    xkb_layout de
+    xkb_variant nodeadkeys
+}
+# ----------------------
+
+# --- Workspaces ---
+workspace 1 output HDMI-A-1
+workspace 2 output DP-3
+# ------------------
+
+# --- Frame Appereance ---
+smart_gaps on
+gaps inner 5
+gaps outer 5
+default_border pixel 2
+
+client.focused $purple $purple $foreground $purple
+client.focused_inactive $unfocused_background $unfocused_background $unfocused_foreground $unfocused_background
+client.unfocused $unfocused_background $unfocused_background $unfocused_foreground $unfocused_background
+client.urgent $red $red $background $red
+# ------------------------
+
+# --- Keybinds ---
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+
+bindsym $mod+Return exec $term
+bindsym $mod+Shift+e exec wlogout -p layer-shell
+bindsym $mod+Shift+c reload
+bindsym $mod+q kill
+bindsym $mod+f fullscreen
+bindsym $mod+d exec wofi --show drun
+bindsym Print+1 exec grim -o HDMI-A-1 "$HOME/Pictures/screenshots/screenshot-$(date +%F_%H-%M-%S).png"
+bindsym Print+2 exec grim -o DP-3 "$HOME/Pictures/screenshots/screenshot-right-$(date +%F_%H-%M-%S).png"
+#-----------------
+
+# --- Waybar ---
+bar {
+    swaybar_command waybar
+}
+# --------------
