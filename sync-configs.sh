@@ -9,7 +9,7 @@ sync_configs() {
         SRC="$HOME/codespace/dotfiles/.config/$dir"
         DST="$HOME/.config/$dir"
         echo "Syncing $dir..."
-        rsync -avh --delete "$SRC/$dir" "$DST/$dir"
+        rsync -avh --delete "$SRC" "$DST"
     done
     echo "Completed."
 }

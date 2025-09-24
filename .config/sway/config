@@ -1,6 +1,2 @@
 # --- includes ---
 include "/home/jules/.config/sway/config.d/*.conf"
-
-bar {
-    swaybar_command waybar
-}
