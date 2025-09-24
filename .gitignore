@@ -1,0 +1,7 @@
+# --------------------
+# Dotfiles Git Ignore
+# --------------------
+
+# kdev4 configs
+.kdev4/
+*.kdev4
