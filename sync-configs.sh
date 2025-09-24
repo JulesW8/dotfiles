@@ -4,12 +4,40 @@
 
 CONFIGS=("sway" "wofi")
 
-for dir in "${CONFIGS[@]}"; do
-    src="$HOME/codespace/dotfiles/.config/$dir/"
-    dest="$HOME/.config/$dir/"
+DIR="$HOME/codespace/dotfiles"
+SRC="$HOME/codespace/dotfiles/.config/"
+DST="$HOME/.config/"
 
-    echo "Syncing $dir..."
-    rsync -avh --delete "$src" "$dest"
-done
+sync_configs() {
+    for dir in "${CONFIGS[@]}"; do
+        echo "Syncing $d..."
+        rsync -avh --delete "$SRC/$d" "$DST/$d"
+    done
+    echo "Rollout configs from $SRC to $DST completed."
+}
 
-echo "Sync complete."
+sync_git() {
+    echo "Adding changes to git"
+    git -C "$DIR" add .
+
+    TIMESTAMP=$(date +"%d-%m-%Y %H:%M:%S")
+    git -C "$DIR" commit -m "Sync configs - $TIMESTAMP" || echo "Nothing to commit!"
+    git -C "$DIR" push
+    echo "updated repo!"
+}
+
+case "$1" in
+    -git)
+        sync_git
+        ;;
+    -activate)
+        sync_configs
+        ;;
+    -all)
+        sync_git
+        sync_configs
+        ;;
+    *)
+        echo "Usage: $0 {-git | -activate | -both}"
+        ;;
+esac
