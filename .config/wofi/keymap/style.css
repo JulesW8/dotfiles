@@ -1,0 +1,28 @@
+@import "/home/jules/.config/wofi/colors.css";
+
+/* Main window */
+#window {
+    margin: 0;
+    padding: 4px;
+    border: 2px solid @purple;
+    border-radius: 4px;
+    background-color: @background;
+}
+
+/* Scroll container */
+#scroll,
+#input {
+    margin: 0;
+    padding: 0;
+}
+
+/* Input/search bar */
+
+
+/* Entries (list items) */
+#entry {
+    background-color: @background;
+    color: @foreground;
+    margin: 4px;
+    padding: 8px;
+}

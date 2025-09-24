@@ -1,0 +1,13 @@
+show=dmenu
+width=360
+height=1040
+location=3
+always_parse_args=true
+show_all=false
+term=foot
+hide_scroll=true
+hide_search=true
+insensitive=true
+columns=1
+cache=/dev/null
+style=/home/jules/.config/wofi/keymap/style.css

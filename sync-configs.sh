@@ -2,17 +2,14 @@
 # dotfiles -> ~/.config
 # Overwrites existing configs with repo versions
 
-CONFIGS = ("backgrounds" "fastfetch" "sway" "waybar" "wofi")
+CONFIGS=("sway" "wofi")
 
-for c in "${CONFIGS[@]}"; do
-    src="$HOME/dotfiles/.config/$c"
-    dest="$HOME/.config/$c"
+for dir in "${CONFIGS[@]}"; do
+    src="$HOME/codespace/dotfiles/.config/$dir/"
+    dest="$HOME/.config/$dir/"
 
-    if [ -d "$src" ]; then
-        echo "Syncing $c..."
-        rm -rf "$dest"
-        cp -r "$src" "$dest"
-    fi
+    echo "Syncing $dir..."
+    rsync -avh --delete "$src" "$dest"
 done
 
 echo "Sync complete."

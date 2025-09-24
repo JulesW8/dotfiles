@@ -1,0 +1,10 @@
+# --- Colors ---
+
+set $background "#1a1a1a"
+set $foreground "#e0e0e0"
+set $purple "#7f1ea8"
+set $green "#1ab831"
+set $red "#ff2d2d"
+set $yellow "#c9b83f"
+set $unfocused_bg "#555555"
+set $unfocused_fg "#f5f5f5"

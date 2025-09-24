@@ -1,0 +1,4 @@
+Programs
+ + Return             Terminal
+ + d                  App Launcher
+ + Shift + e          Exit Session
