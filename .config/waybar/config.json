@@ -1,0 +1,21 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "margin": 0,
+    "padding": 0,
+    "modules-left": [
+      "custom/launcher",
+      "sway/workspaces",
+      "tray"
+    ],
+    "modules-center": ["clock"],
+    "modules-right": [
+      "backlight",
+      "pulseaudio",
+      "custom/keyboard-layout",
+      "network",
+      "custom/power"
+    ],
+    "include": ["$HOME/.config/waybar/modules.json"],
+}

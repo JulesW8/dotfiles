@@ -2,12 +2,12 @@
 # dotfiles -> ~/.config
 # Overwrites existing configs with repo versions
 
-CONFIGS=("sway" "wofi")
+CONFIGS=("environment.d" "sway" "waybar" "wofi")
 
 sync_configs() {
     for dir in "${CONFIGS[@]}"; do
-        SRC="$HOME/codespace/dotfiles/.config/$dir"
-        DST="$HOME/.config/$dir"
+        SRC="$HOME/codespace/dotfiles/.config/$dir/"
+        DST="$HOME/.config/$dir/"
         echo "Syncing $dir..."
         rsync -avh --delete "$SRC" "$DST"
     done

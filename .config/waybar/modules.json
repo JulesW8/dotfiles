@@ -1,0 +1,49 @@
+{
+    "sway/workspace": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "\udb80\udfa6",
+            "2": "\udb80\udfa9"
+        }
+    },
+    "tray": {
+        "spacing": 5
+    },
+    "clock": {
+        "format": "{:%a %d %b | %I:%M %p}",
+        "format-alt": "\uef37  {:%Y-%m-%d \uf017 %H:%M:%S}",
+        "interval": 1
+    },
+    "network": {
+        // "interface": "wlp2s0", // (Optional) To force the use of this interface
+        "format": "\uf421 Disabled",
+        "format-wifi": "\uf1eb {essid}",
+        "format-ethernet": "\uef44 Wired",
+        "format-disconnected": "\uf421 Disconnected",
+        "tooltip-format": "{ifname} via {gwaddri}",
+        "tooltip-format-wifi": "\uf1eb {essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "\uef44 {ifname} ({ipaddr}/{cidr})",
+        "tooltip-format-disconnected": "\uf421 Disconnected",
+        "on-click": "nm-connection-editor"
+    },
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout -p layer-shell",
+        "tooltip": false
+    },
+    "custom/keyboard-layout": {
+        "exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
+        "interval": 1,
+        "format": "  {}",
+        "signal": 1,
+    "tooltip": false,
+    "on-click": "$HOME/.config/waybar/scripts/keyhint.sh"
+  },
+  "custom/launcher": {
+    "format": "",
+    "on-click": "wofi -show drun",
+    "tooltip": false
+  }
+}
