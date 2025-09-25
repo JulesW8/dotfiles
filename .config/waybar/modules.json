@@ -8,11 +8,14 @@
             "2": "\udb80\udfa9"
         }
     },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
     "tray": {
         "spacing": 5
     },
     "clock": {
-        "format": "{:%a %d %b | %I:%M %p}",
+        "format": "{:%Y-%m-%d}",
         "format-alt": "\uef37  {:%Y-%m-%d \uf017 %H:%M:%S}",
         "interval": 1
     },

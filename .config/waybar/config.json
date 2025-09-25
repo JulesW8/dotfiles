@@ -2,19 +2,16 @@
     "layer": "top",
     "position": "top",
     "height": 30,
-    "margin": 0,
-    "padding": 0,
     "modules-left": [
-      "custom/launcher",
       "sway/workspaces",
-      "tray"
+      "sway/mode",
+      "custom/launcher"
     ],
-    "modules-center": ["clock"],
+    "modules-center": ["sway-window"],
     "modules-right": [
-      "backlight",
-      "pulseaudio",
-      "custom/keyboard-layout",
       "network",
+      "sway-language",
+      "clock"
       "custom/power"
     ],
     "include": ["$HOME/.config/waybar/modules.json"],
