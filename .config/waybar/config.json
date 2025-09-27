@@ -3,9 +3,7 @@
     "position": "top",
     "height": 30,
     "modules-left": [
-      "sway/workspaces",
-      "sway/mode",
-      "custom/launcher"
+      "sway/workspaces"
     ],
     "modules-center": ["sway-window"],
     "modules-right": [

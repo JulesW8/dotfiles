@@ -8,19 +8,12 @@
             "2": "\udb80\udfa9"
         }
     },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "tray": {
-        "spacing": 5
-    },
     "clock": {
         "format": "{:%Y-%m-%d}",
         "format-alt": "\uef37  {:%Y-%m-%d \uf017 %H:%M:%S}",
         "interval": 1
     },
     "network": {
-        // "interface": "wlp2s0", // (Optional) To force the use of this interface
         "format": "\uf421 Disabled",
         "format-wifi": "\uf1eb {essid}",
         "format-ethernet": "\uef44 Wired",
@@ -36,17 +29,4 @@
         "on-click": "wlogout -p layer-shell",
         "tooltip": false
     },
-    "custom/keyboard-layout": {
-        "exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
-        "interval": 1,
-        "format": "  {}",
-        "signal": 1,
-    "tooltip": false,
-    "on-click": "$HOME/.config/waybar/scripts/keyhint.sh"
-  },
-  "custom/launcher": {
-    "format": "",
-    "on-click": "wofi -show drun",
-    "tooltip": false
-  }
 }
