@@ -9,7 +9,7 @@
     "modules-right": [
       "network",
       "sway-language",
-      "clock"
+      "clock",
       "custom/power"
     ],
     "include": ["$HOME/.config/waybar/modules.json"],
