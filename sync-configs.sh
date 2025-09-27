@@ -19,7 +19,7 @@ sync_git() {
     echo "Adding changes to git"
     git -C "$DIR" add .
 
-    TIMESTAMP=$(date +"%d-%m-%Y %H:%M:%S")
+    TIMESTAMP=$(date +"%d-%m-%Y")
     git -C "$DIR" commit -m "Sync configs - $TIMESTAMP" || echo "Nothing to commit!"
     git -C "$DIR" push
     echo "updated repo!"
