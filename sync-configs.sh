@@ -2,7 +2,7 @@
 # dotfiles -> ~/.config
 # Overwrites existing configs with repo versions
 
-CONFIGS=("environment.d" "sway" "waybar" "wofi")
+CONFIGS=("environment.d" "sway" "waybar" "wofi" "xdg-desktop-portal")
 
 sync_configs() {
     for dir in "${CONFIGS[@]}"; do

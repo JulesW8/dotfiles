@@ -1,16 +1,24 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
+    "output": "DP-3",
+
     "modules-left": [
       "sway/workspaces"
     ],
-    "modules-center": ["sway-window"],
+
+    "modules-center": [
+      "sway/window"
+    ],
+
     "modules-right": [
       "network",
-      "sway-language",
+      "sway/language",
       "clock",
       "custom/power"
     ],
-    "include": ["$HOME/.config/waybar/modules.json"],
+
+    "include": [
+      "/home/jules/.config/waybar/modules.json"
+    ]
 }
